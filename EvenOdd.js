@@ -14,3 +14,5 @@ function checkIfEvenOrOdd2(a){
     return a % 2 === 0 ? "even" : "odd";
 }
 console.log( "-7 is ",checkIfEvenOrOdd2(-7));
+
+//  Even Odd
