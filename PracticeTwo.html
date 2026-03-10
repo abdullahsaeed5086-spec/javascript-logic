@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+//   let name="Hello Abdullah"
+//   for(let i=0;i<name.length;i++){
+//     console.log(name[i]);
+    
+//   }
+
+//   let name="Hello Abdullah"
+// for(let char of name){
+//     console.log(char);
+// }
+
+
+//   let name="Code Step By Stzep"
+// for(let char of name){
+//     // if(char=="b"){
+//     //     break;
+//     // }
+//       if(char=="z"){
+//       continue
+//     }
+//      console.log(char);
+// }
+
+// let user={
+// name:"Abdullah Saeed",
+// age:21,
+// email:"abdullahsaeedpak6gmail.com",
+// admin:false
+
+// }
+// for(let key in user){
+// // console.log(key,user[key]); all value
+// // console.log(user[key]); value
+// //   console.log(key);
+
+// // if(key=='age'){
+// //     break;
+// // }
+// if(key=='age'){
+//  continue
+// }
+//   console.log(key + " is "+ user[key]);
+// }
+
+
+// function getInputFieldValue(){
+//    let input=document.getElementById('name').value
+//     console.log(input);
+//     document.getElementById('heading').innerText=input
+// }
+// function setInputFieldValue(){
+//    let value="My name is Abdullah Saeed"
+//    document.getElementById('name').value=value
+// }
+
+// function removeInputFieldValue(){
+//    document.getElementById('name').value=""
+// }
+
+// function copyInputFieldValue(){
+//    let input=document.getElementById('who').value
+//    document.getElementById('name').value=input
+// }
+
+// function handleinputfield(event){
+//    console.log(event.target.name);
+
+   
+   
+// }
+// function handleOnkeyUP(){
+//    console.log('OnkeyUP');
+   
+// }
+// function handleOnkeydown(){
+//    console.log('onkeydown');
+   
+// }
+// function handleOnfocus(){
+//    console.log('start typing...');
+   
+// }
+
+// function handleBlur(event){
+
+//    console.log(event.target.name);
+//  if(event.target.id="age" && event.target.value<=19){
+//  alert(" not a valid age")
+//  }
+
+   
+// }
+  
+   </script>
+</head> 
+<!-- <br> -->
+    <!-- <h1>For Of Loop</h1> -->
+     <!-- <h1>For in Loop</h1> -->
+      <!-- <h1> DOM Input Field</h1> -->
+      <!-- <h1>Input Field Events </h1> -->
+         <!-- <h1>Input Field Style </h1> -->
+          <h1>Input Field Validation </h1>
+      
+      <!-- <h1 id="heading"></h1>
+   <input type="text" id="name" placeholder="enter name">
+     <input type="text" id="who" placeholder="enter name"></br>
+   <button onclick="getInputFieldValue()">Get Value</button>
+     <button onclick="setInputFieldValue()">Set Value</button>
+       <button onclick="removeInputFieldValue()">Remove Value</button>
+           <button onclick="copyInputFieldValue()">Copy Value</button> -->
+  
+           <!-- <input type="text" oninput="handleinputfield(event)"
+           onkeyup="handleOnkeyUP()"
+           onkeydown="handleOnkeydown()"
+           onfocus="handleOnfocus()"
+           onblur="handleBlur(ev)"
+           placeholder="enter name">
+
+           <input type="text" onclick="handleinputfield(event)"  name="Userage"  id="age" onblur="handleBlur(event)" placeholder="enter age">
+                      <input type="text" onclick="handleinputfield(event)" name="Useremail"   id="email" placeholder="enter email"> -->
+
+   <!-- <h1>Input Field Style </h1> -->
+<!-- <input type="text" placeholder="enter user name" id="user"><br/>
+<button type="button" onclick="handleStyle()">Onclick</button><br/>
+<br/>
+<input type="range" step="10" max="300" min="50" oninput="handlewidth(event)">
+<br/>
+<input type="range" step="10" max="100" min="0" onchange ="handlemargin(event)"> -->
+
+<input type="text" placeholder="enter user name" id="user" onblur="validateinputfield(event)">
+<span id="user-message" style="color: blue;"></span>
+<script>
+ // <h1>Input Field Style </h1>
+
+   // document.getElementById('user').style.color="red"
+   // function handleStyle(){
+   //   let inputID=document.getElementById('user').style
+   //   inputID.color="purple"
+   //       inputID.width="234px"
+   //        inputID.height="456px"
+   // }
+   // function handlewidth(event){
+   //    console.log(event.target.value);
+   //    let width=event.target.value+"px"
+   //    console.log(width);
+   //     let inputID=document.getElementById('user').style.width=width
+      
+   // }
+
+   // function handlemargin(){
+   //      let margintop=event.target.value+"px"
+   //       let inputIDStyle=document.getElementById('user').style.marginTop=margintop
+   // }
+
+function validateinputfield(event){
+console.log(event.target.value);
+let val=event.target.value;
+let validateEI=document.getElementById('user-message')
+ validateEI.style.display="block"
+if(val.length<4){
+   validateEI.textContent="min valid length is 4"
+}else if(val.length>12){
+    validateEI.textContent="max valid length is 12"
+}else{
+   validateEI.textContent=""
+   validateEI.style.display="none"
+}
+}
+</script>
+</body>
+</html>
